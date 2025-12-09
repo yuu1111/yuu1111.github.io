@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import tailwindcss from '@tailwindcss/vite'
 import mdx from '@mdx-js/rollup'
 import path from 'path'
 
@@ -9,6 +10,7 @@ export default defineConfig({
     TanStackRouterVite(),
     { enforce: 'pre', ...mdx() },
     react(),
+    tailwindcss(),
   ],
   resolve: {
     alias: {

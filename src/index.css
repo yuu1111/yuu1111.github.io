@@ -1,77 +1,107 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 14%;
-    --card-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --ring: 212 95% 68%;
-    --radius: 0.5rem;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground antialiased;
-  }
+@theme {
+  --color-background: oklch(0.145 0.02 260);
+  --color-foreground: oklch(0.97 0.01 260);
+  --color-card: oklch(0.18 0.02 260);
+  --color-card-foreground: oklch(0.97 0.01 260);
+  --color-primary: oklch(0.97 0.01 260);
+  --color-primary-foreground: oklch(0.145 0.02 260);
+  --color-secondary: oklch(0.22 0.02 260);
+  --color-secondary-foreground: oklch(0.97 0.01 260);
+  --color-muted: oklch(0.22 0.02 260);
+  --color-muted-foreground: oklch(0.65 0.01 260);
+  --color-accent: oklch(0.22 0.02 260);
+  --color-accent-foreground: oklch(0.97 0.01 260);
+  --color-border: oklch(0.22 0.02 260);
+  --color-ring: oklch(0.65 0.18 250);
+  --radius: 0.5rem;
 }
 
-@layer components {
-  .prose {
-    @apply max-w-none text-foreground;
-  }
+* {
+  border-color: var(--color-border);
+}
 
-  .prose h1 {
-    @apply text-3xl font-bold mb-4 text-foreground;
-  }
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  .prose h2 {
-    @apply text-2xl font-semibold mb-3 mt-8 text-foreground;
-  }
+.prose {
+  max-width: none;
+  color: var(--color-foreground);
+}
 
-  .prose h3 {
-    @apply text-xl font-semibold mb-2 mt-6 text-foreground;
-  }
+.prose h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-foreground);
+}
 
-  .prose p {
-    @apply mb-4 leading-relaxed;
-  }
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  color: var(--color-foreground);
+}
 
-  .prose a {
-    @apply text-blue-400 hover:text-blue-300 underline;
-  }
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--color-foreground);
+}
 
-  .prose code {
-    @apply bg-muted px-1.5 py-0.5 rounded text-sm;
-  }
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+}
 
-  .prose pre {
-    @apply bg-muted p-4 rounded-lg overflow-x-auto mb-4;
-  }
+.prose a {
+  color: oklch(0.7 0.15 250);
+  text-decoration: underline;
+}
 
-  .prose ul {
-    @apply list-disc list-inside mb-4 space-y-1;
-  }
+.prose a:hover {
+  color: oklch(0.8 0.12 250);
+}
 
-  .prose ol {
-    @apply list-decimal list-inside mb-4 space-y-1;
-  }
+.prose code {
+  background-color: var(--color-muted);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
 
-  .prose blockquote {
-    @apply border-l-4 border-muted-foreground pl-4 italic my-4;
-  }
+.prose pre {
+  background-color: var(--color-muted);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.prose blockquote {
+  border-left-width: 4px;
+  border-color: var(--color-muted-foreground);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
 }
