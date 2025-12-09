@@ -24,9 +24,7 @@ export function Navigation() {
               to={item.path}
               className={cn(
                 'transition-colors hover:text-foreground/80',
-                currentPath === item.path
-                  ? 'text-foreground'
-                  : 'text-foreground/60'
+                currentPath === item.path ? 'text-foreground' : 'text-foreground/60',
               )}
             >
               {item.label}

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Github, Mail, Twitter } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Mail, Github, Twitter } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
@@ -39,12 +39,7 @@ function ContactPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           {contacts.map((contact) => (
-            <Button
-              key={contact.name}
-              variant="outline"
-              className="w-full justify-start"
-              asChild
-            >
+            <Button key={contact.name} variant="outline" className="w-full justify-start" asChild>
               <a href={contact.href} target="_blank" rel="noopener noreferrer">
                 <contact.icon className="mr-3 h-5 w-5" />
                 <span className="flex-1 text-left">{contact.name}</span>

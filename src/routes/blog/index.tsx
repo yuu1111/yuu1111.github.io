@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/blog/')({
   component: BlogIndexPage,
@@ -33,9 +33,7 @@ function BlogIndexPage() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-xl">{post.title}</CardTitle>
-                  <span className="text-sm text-muted-foreground">
-                    {post.date}
-                  </span>
+                  <span className="text-sm text-muted-foreground">{post.date}</span>
                 </div>
                 <CardDescription>{post.description}</CardDescription>
               </CardHeader>

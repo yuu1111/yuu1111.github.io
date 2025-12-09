@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/portfolio')({
   component: PortfolioPage,
@@ -43,10 +43,7 @@ function PortfolioPage() {
             <CardContent>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 bg-secondary rounded text-xs"
-                  >
+                  <span key={tag} className="px-2 py-1 bg-secondary rounded text-xs">
                     {tag}
                   </span>
                 ))}

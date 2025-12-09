@@ -1,13 +1,16 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
 })
 
 // MDXコンテンツのインポート（動的インポート）
-const posts: Record<string, { default: React.ComponentType; frontmatter?: { title: string; date: string } }> = import.meta.glob('@/content/blog/*.mdx', { eager: true })
+const posts: Record<
+  string,
+  { default: React.ComponentType; frontmatter?: { title: string; date: string } }
+> = import.meta.glob('@/content/blog/*.mdx', { eager: true })
 
 function BlogPostPage() {
   const { slug } = Route.useParams()

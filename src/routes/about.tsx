@@ -15,9 +15,7 @@ function AboutPage() {
           <CardTitle>自己紹介</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">
-            ここに自己紹介を書いてください。
-          </p>
+          <p className="text-muted-foreground">ここに自己紹介を書いてください。</p>
         </CardContent>
       </Card>
 
@@ -28,10 +26,7 @@ function AboutPage() {
         <CardContent>
           <div className="flex flex-wrap gap-2">
             {['TypeScript', 'React', 'Node.js', 'Python'].map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 bg-secondary rounded-full text-sm"
-              >
+              <span key={skill} className="px-3 py-1 bg-secondary rounded-full text-sm">
                 {skill}
               </span>
             ))}

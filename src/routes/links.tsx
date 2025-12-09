@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/links')({
   component: LinksPage,
@@ -37,9 +37,7 @@ function LinksPage() {
               <CardTitle className="text-lg">{link.name}</CardTitle>
             </CardHeader>
             <CardContent className="flex items-center justify-between">
-              <p className="text-muted-foreground text-sm">
-                {link.description}
-              </p>
+              <p className="text-muted-foreground text-sm">{link.description}</p>
               <Button variant="ghost" size="sm" asChild>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-4 w-4" />
