@@ -1,11 +1,5 @@
 [
   {
-    "name": "Email",
-    "icon": "Mail",
-    "href": "mailto:example@example.com",
-    "label": "example@example.com"
-  },
-  {
     "name": "GitHub",
     "icon": "Github",
     "href": "https://github.com/yuu1111",
@@ -14,7 +8,7 @@
   {
     "name": "Twitter",
     "icon": "Twitter",
-    "href": "https://twitter.com/",
-    "label": "@username"
+    "href": "https://twitter.com/yuu111_",
+    "label": "@yuu111_"
   }
 ]

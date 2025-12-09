@@ -6,7 +6,7 @@ export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
 })
 
-// MDXコンテンツのインポート（動的インポート）
+// MDXコンテンツのインポート
 const posts: Record<
   string,
   { default: React.ComponentType; frontmatter?: { title: string; date: string } }

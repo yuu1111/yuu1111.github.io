@@ -13,7 +13,10 @@ function RootLayout() {
         <Outlet />
       </main>
       <footer className="border-t py-6 text-center text-sm text-muted-foreground">
-        <p>© 2024 yuu1111. All rights reserved.</p>
+        <p>
+          © 2024{new Date().getFullYear() > 2024 ? `-${new Date().getFullYear()}` : ''} yuu1111. All
+          rights reserved.
+        </p>
       </footer>
     </div>
   )

@@ -25,7 +25,7 @@ function AboutPage() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
-            {['TypeScript', 'React', 'Node.js', 'Python'].map((skill) => (
+            {['TypeScript', 'React', 'Bun'].map((skill) => (
               <span key={skill} className="px-3 py-1 bg-secondary rounded-full text-sm">
                 {skill}
               </span>

@@ -1,14 +1,18 @@
 import contactsData from '@data/contacts.json'
+import { SiGithub, SiX } from '@icons-pack/react-simple-icons'
 import { createFileRoute } from '@tanstack/react-router'
-import { Github, type LucideIcon, Mail, Twitter } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import type { ComponentType, SVGProps } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import type { Contact } from '@/types/contact'
 
-const iconMap: Record<string, LucideIcon> = {
+type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
+
+const iconMap: Record<string, IconComponent> = {
   Mail,
-  Github,
-  Twitter,
+  Github: SiGithub,
+  Twitter: SiX,
 }
 
 const contacts: Contact[] = contactsData
