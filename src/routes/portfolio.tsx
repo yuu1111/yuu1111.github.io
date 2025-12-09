@@ -1,32 +1,15 @@
+import projectsData from '@data/projects.json'
 import { createFileRoute } from '@tanstack/react-router'
 import { ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import type { Project } from '@/types/project'
+
+const projects: Project[] = projectsData
 
 export const Route = createFileRoute('/portfolio')({
   component: PortfolioPage,
 })
-
-const projects = [
-  {
-    title: 'Project 1',
-    description: 'プロジェクトの説明をここに書きます。',
-    tags: ['React', 'TypeScript'],
-    url: '#',
-  },
-  {
-    title: 'Project 2',
-    description: 'プロジェクトの説明をここに書きます。',
-    tags: ['Node.js', 'Express'],
-    url: '#',
-  },
-  {
-    title: 'Project 3',
-    description: 'プロジェクトの説明をここに書きます。',
-    tags: ['Python', 'FastAPI'],
-    url: '#',
-  },
-]
 
 function PortfolioPage() {
   return (

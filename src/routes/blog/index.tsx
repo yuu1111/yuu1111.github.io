@@ -1,25 +1,13 @@
+import postsData from '@data/posts.json'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import type { Post } from '@/types/post'
+
+const posts: Post[] = postsData
 
 export const Route = createFileRoute('/blog/')({
   component: BlogIndexPage,
 })
-
-// ブログ記事のメタデータ（実際のプロジェクトではmdxから自動生成）
-const posts = [
-  {
-    slug: 'hello-world',
-    title: 'Hello World',
-    description: '最初のブログ記事です。',
-    date: '2024-12-10',
-  },
-  {
-    slug: 'getting-started',
-    title: 'Getting Started with React',
-    description: 'Reactの始め方について解説します。',
-    date: '2024-12-09',
-  },
-]
 
 function BlogIndexPage() {
   return (

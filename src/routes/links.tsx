@@ -1,29 +1,15 @@
+import linksData from '@data/links.json'
 import { createFileRoute } from '@tanstack/react-router'
 import { ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import type { Link } from '@/types/link'
+
+const links: Link[] = linksData
 
 export const Route = createFileRoute('/links')({
   component: LinksPage,
 })
-
-const links = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/yuu1111',
-    description: 'ソースコードやプロジェクト',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/',
-    description: 'つぶやき',
-  },
-  {
-    name: 'Zenn',
-    url: 'https://zenn.dev/',
-    description: '技術記事',
-  },
-]
 
 function LinksPage() {
   return (
