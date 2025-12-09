@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --ring: 212 95% 68%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply max-w-none text-foreground;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-bold mb-4 text-foreground;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-semibold mb-3 mt-8 text-foreground;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold mb-2 mt-6 text-foreground;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose a {
+    @apply text-blue-400 hover:text-blue-300 underline;
+  }
+
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm;
+  }
+
+  .prose pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-1;
+  }
+
+  .prose ol {
+    @apply list-decimal list-inside mb-4 space-y-1;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-muted-foreground pl-4 italic my-4;
+  }
+}
