@@ -1,14 +1,2 @@
 [
-  {
-    "slug": "hello-world",
-    "title": "Hello World",
-    "description": "最初のブログ記事です。",
-    "date": "2024-12-10"
-  },
-  {
-    "slug": "getting-started",
-    "title": "Getting Started with React",
-    "description": "Reactの始め方について解説します。",
-    "date": "2024-12-09"
-  }
 ]
