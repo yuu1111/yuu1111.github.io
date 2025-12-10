@@ -10,7 +10,7 @@ export const Route = createFileRoute('/blog/$slug')({
 const posts: Record<
   string,
   { default: React.ComponentType; frontmatter?: { title: string; date: string } }
-> = import.meta.glob('@/content/blog/*.mdx', { eager: true })
+> = import.meta.glob('@content/blog/*.mdx', { eager: true })
 
 function BlogPostPage() {
   const { slug } = Route.useParams()
