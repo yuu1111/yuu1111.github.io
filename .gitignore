@@ -32,5 +32,3 @@ lerna-debug.log*
 # TypeScript
 *.tsbuildinfo
 
-# TanStack Router
-src/routeTree.gen.ts
