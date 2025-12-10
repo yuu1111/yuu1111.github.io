@@ -20,12 +20,6 @@
     "url": "https://github.com/yuu1111/SteamPlayerTracker"
   },
   {
-    "title": "CraftDeck",
-    "description": "Minecraft向けStream Deck連携ツール",
-    "tags": ["C#", "Minecraft"],
-    "url": "https://github.com/yuu1111/CraftDeck"
-  },
-  {
     "title": "SkillTrackerColoring",
     "description": "スキルトラッカーのカラーリングMod",
     "tags": ["C#", "Elin"],
