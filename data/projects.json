@@ -1,20 +1,40 @@
 [
   {
-    "title": "Project 1",
-    "description": "プロジェクトの説明をここに書きます。",
-    "tags": ["React", "TypeScript"],
-    "url": "#"
+    "title": "HSP-Decompiler",
+    "description": "Hot Soup Processor 2/3用デコンパイラ",
+    "tags": ["C#", "HSP"],
+    "url": "https://github.com/yuu1111/HSP-Decompiler",
+    "fork": true
   },
   {
-    "title": "Project 2",
-    "description": "プロジェクトの説明をここに書きます。",
-    "tags": ["Node.js", "Express"],
-    "url": "#"
+    "title": "obsidian-auto-link-title",
+    "description": "ペーストしたリンクのタイトルを自動取得するObsidianプラグイン",
+    "tags": ["TypeScript", "Obsidian"],
+    "url": "https://github.com/yuu1111/obsidian-auto-link-title",
+    "fork": true
   },
   {
-    "title": "Project 3",
-    "description": "プロジェクトの説明をここに書きます。",
-    "tags": ["Python", "FastAPI"],
-    "url": "#"
+    "title": "SteamPlayerTracker",
+    "description": "Steamプレイヤーの追跡ツール",
+    "tags": ["TypeScript"],
+    "url": "https://github.com/yuu1111/SteamPlayerTracker"
+  },
+  {
+    "title": "CraftDeck",
+    "description": "Minecraft向けStream Deck連携ツール",
+    "tags": ["C#", "Minecraft"],
+    "url": "https://github.com/yuu1111/CraftDeck"
+  },
+  {
+    "title": "SkillTrackerColoring",
+    "description": "スキルトラッカーのカラーリングMod",
+    "tags": ["C#", "Elin"],
+    "url": "https://github.com/yuu1111/SkillTrackerColoring"
+  },
+  {
+    "title": "WidgetTimeViewer",
+    "description": "時間表示ウィジェットMod",
+    "tags": ["C#", "Elin"],
+    "url": "https://github.com/yuu1111/WidgetTimeViewer"
   }
 ]

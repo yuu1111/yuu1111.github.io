@@ -3,4 +3,5 @@ export interface Project {
   description: string
   tags: string[]
   url: string
+  fork?: boolean
 }

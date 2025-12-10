@@ -1,11 +1,11 @@
 import projectsData from '@data/projects.json'
 import { createFileRoute } from '@tanstack/react-router'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, GitFork } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import type { Project } from '@/types/project'
 
-const projects: Project[] = projectsData
+const projects = projectsData as Project[]
 
 export const Route = createFileRoute('/portfolio')({
   component: PortfolioPage,
@@ -20,7 +20,15 @@ function PortfolioPage() {
         {projects.map((project) => (
           <Card key={project.title}>
             <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                {project.title}
+                {project.fork && (
+                  <span className="inline-flex items-center gap-1 text-xs font-normal text-muted-foreground">
+                    <GitFork className="h-3 w-3" />
+                    Fork
+                  </span>
+                )}
+              </CardTitle>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardContent>
