@@ -1,9 +1,25 @@
-import postsData from '@data/posts.json'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import type { Post } from '@/types/post'
 
-const posts: Post[] = postsData
+interface PostFrontmatter {
+  title: string
+  date: string
+  description?: string
+}
+
+const postModules = import.meta.glob<{ frontmatter: PostFrontmatter }>('@content/blog/*.mdx', {
+  eager: true,
+})
+
+const posts = Object.entries(postModules)
+  .map(([path, module]) => {
+    const slug = path.split('/').pop()?.replace('.mdx', '') ?? ''
+    return {
+      slug,
+      ...module.frontmatter,
+    }
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -23,7 +39,7 @@ function HomePage() {
                   <CardTitle className="text-xl">{post.title}</CardTitle>
                   <span className="text-sm text-muted-foreground">{post.date}</span>
                 </div>
-                <CardDescription>{post.description}</CardDescription>
+                {post.description && <CardDescription>{post.description}</CardDescription>}
               </CardHeader>
             </Card>
           </Link>
