@@ -29,7 +29,7 @@ const categoryConfig = {
   social: { label: 'SNS', icon: Users },
   development: { label: 'Development', icon: Globe },
   gaming: { label: 'Gaming', icon: Gamepad2 },
-  wishlist: { label: 'Wishlist & Equipment', icon: Gift },
+  wishlist: { label: 'Wishlist', icon: Gift },
 } as const
 
 const links = linksData as Link[]

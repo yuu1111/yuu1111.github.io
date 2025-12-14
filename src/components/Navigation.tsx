@@ -2,10 +2,9 @@ import { Link, useRouterState } from '@tanstack/react-router'
 import { cn } from '@/lib/utils'
 
 const navItems = [
-  { path: '/', label: 'Home' },
+  { path: '/', label: 'Blog' },
   { path: '/about', label: 'About' },
   { path: '/portfolio', label: 'Portfolio' },
-  { path: '/blog', label: 'Blog' },
   { path: '/contact', label: 'Contact' },
   { path: '/links', label: 'Links' },
 ] as const

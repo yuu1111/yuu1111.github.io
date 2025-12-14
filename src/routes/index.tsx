@@ -1,5 +1,9 @@
+import postsData from '@data/posts.json'
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Button } from '@/components/ui/button'
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import type { Post } from '@/types/post'
+
+const posts: Post[] = postsData
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -7,18 +11,23 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] text-center">
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">Welcome</h1>
-      <p className="text-xl text-muted-foreground max-w-2xl mb-8">
-        ポートフォリオサイトへようこそ。 開発者としての活動やプロジェクトを紹介しています。
-      </p>
-      <div className="flex gap-4">
-        <Button asChild>
-          <Link to="/about">About Me</Link>
-        </Button>
-        <Button variant="outline" asChild>
-          <Link to="/portfolio">Portfolio</Link>
-        </Button>
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-8">Blog</h1>
+
+      <div className="space-y-4">
+        {posts.map((post) => (
+          <Link key={post.slug} to="/blog/$slug" params={{ slug: post.slug }}>
+            <Card className="transition-colors hover:bg-card/80">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-xl">{post.title}</CardTitle>
+                  <span className="text-sm text-muted-foreground">{post.date}</span>
+                </div>
+                <CardDescription>{post.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+        ))}
       </div>
     </div>
   )
