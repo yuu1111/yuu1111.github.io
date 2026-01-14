@@ -1,10 +1,24 @@
 export const frontmatter = {
   title: 'OverdungeonのDeployミス',
-  date: '2025-12-14',
+  date: '2026-01-14',
 }
 
-# 前置き
-後で書く
+# 内容
 
+いつから入ったか正確にはわからないけど配布バイナリに以下の不要なファイルが含まれている
+削除推奨
 
+- `Overdungeon.exe`
+- `Overdungeon_Data/`
+- `Overdungeon_BackUpThisFolder_ButDontShipItWithYourGame/`
+- `Windows-64bit_BackUpThisFolder_ButDontShipItWithYourGame/`
+- `.gitkeep`
+
+## Before
+
+![Before](/image/overdungeon-duplicate-files/Before.png)
+
+## After
+
+![After](/image/overdungeon-duplicate-files/After.png)
 
