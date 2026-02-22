@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import type { PostFrontmatter } from '@/types/mdx.d'
 
-interface PostFrontmatter {
-  title: string
-  date: string
-  description?: string
-}
-
+/**
+ * @description MDXブログ記事モジュールの一括インポート
+ */
 const postModules = import.meta.glob<{ frontmatter: PostFrontmatter }>('@content/blog/*.mdx', {
   eager: true,
 })
 
+/**
+ * @description 日付降順でソートされたブログ記事一覧
+ */
 const posts = Object.entries(postModules)
   .map(([path, module]) => {
     const slug = path.split('/').pop()?.replace('.mdx', '') ?? ''
@@ -25,6 +26,9 @@ export const Route = createFileRoute('/')({
   component: HomePage,
 })
 
+/**
+ * @description ブログ記事一覧を表示するホームページ
+ */
 function HomePage() {
   return (
     <div className="max-w-3xl mx-auto">

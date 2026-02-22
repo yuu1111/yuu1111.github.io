@@ -5,12 +5,18 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import type { Project } from '@/types/project'
 
+/**
+ * @description プロジェクトデータ
+ */
 const projects = projectsData as Project[]
 
 export const Route = createFileRoute('/portfolio')({
   component: PortfolioPage,
 })
 
+/**
+ * @description プロジェクト一覧ページ
+ */
 function PortfolioPage() {
   return (
     <div className="max-w-4xl mx-auto">

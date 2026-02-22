@@ -1,21 +1,26 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft } from 'lucide-react'
+import type { ComponentType } from 'react'
 import { Button } from '@/components/ui/button'
+import type { PostFrontmatter } from '@/types/mdx.d'
 
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
 })
 
-// MDXコンテンツのインポート
-const posts: Record<
-  string,
-  { default: React.ComponentType; frontmatter?: { title: string; date: string } }
-> = import.meta.glob('@content/blog/*.mdx', { eager: true })
+/**
+ * @description MDXブログ記事モジュールの一括インポート
+ */
+const posts: Record<string, { default: ComponentType; frontmatter?: PostFrontmatter }> =
+  import.meta.glob('@content/blog/*.mdx', { eager: true })
 
+/**
+ * @description ブログ記事の個別表示ページ
+ */
 function BlogPostPage() {
   const { slug } = Route.useParams()
 
-  const postPath = Object.keys(posts).find((path) => path.includes(`/${slug}.mdx`))
+  const postPath = Object.keys(posts).find((path) => path.endsWith(`/${slug}.mdx`))
   const post = postPath ? posts[postPath] : null
 
   if (!post) {
@@ -40,7 +45,7 @@ function BlogPostPage() {
       <Button variant="ghost" className="mb-6" asChild>
         <Link to="/blog">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Blog
+          ブログ一覧へ戻る
         </Link>
       </Button>
 

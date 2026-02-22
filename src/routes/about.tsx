@@ -5,6 +5,9 @@ export const Route = createFileRoute('/about')({
   component: AboutPage,
 })
 
+/**
+ * @description 自己紹介ページ
+ */
 function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto">

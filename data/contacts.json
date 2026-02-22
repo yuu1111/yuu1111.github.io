@@ -2,13 +2,13 @@
   {
     "name": "GitHub",
     "icon": "Github",
-    "href": "https://github.com/yuu1111",
+    "url": "https://github.com/yuu1111",
     "label": "@yuu1111"
   },
   {
     "name": "Twitter",
     "icon": "Twitter",
-    "href": "https://twitter.com/yuu111_",
+    "url": "https://twitter.com/yuu111_",
     "label": "@yuu111_"
   }
 ]

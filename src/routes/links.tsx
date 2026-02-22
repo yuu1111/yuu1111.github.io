@@ -9,13 +9,14 @@ import {
 } from '@icons-pack/react-simple-icons'
 import { createFileRoute } from '@tanstack/react-router'
 import { ExternalLink, Gamepad2, Gift, Globe, Users } from 'lucide-react'
-import type { ComponentType, SVGProps } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import type { IconComponent } from '@/types/icon'
 import type { Link } from '@/types/link'
 
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
-
+/**
+ * @description サービス名からアイコンコンポーネントへのマッピング
+ */
 const iconMap: Record<string, IconComponent> = {
   Twitter: SiX,
   Instagram: SiInstagram,
@@ -25,6 +26,9 @@ const iconMap: Record<string, IconComponent> = {
   'osu!': SiOsu,
 }
 
+/**
+ * @description リンクカテゴリの表示設定
+ */
 const categoryConfig = {
   social: { label: 'SNS', icon: Users },
   development: { label: 'Development', icon: Globe },
@@ -32,8 +36,14 @@ const categoryConfig = {
   wishlist: { label: 'Wishlist', icon: Gift },
 } as const
 
+/**
+ * @description リンクデータ
+ */
 const links = linksData as Link[]
 
+/**
+ * @description カテゴリごとにグループ化されたリンク
+ */
 const groupedLinks = links.reduce(
   (acc, link) => {
     if (!acc[link.category]) {
@@ -49,6 +59,9 @@ export const Route = createFileRoute('/links')({
   component: LinksPage,
 })
 
+/**
+ * @description 外部リンク一覧ページ
+ */
 function LinksPage() {
   return (
     <div className="max-w-2xl mx-auto">

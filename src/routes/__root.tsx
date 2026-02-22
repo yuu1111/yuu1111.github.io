@@ -5,6 +5,9 @@ export const Route = createRootRoute({
   component: RootLayout,
 })
 
+/**
+ * @description アプリケーション全体のルートレイアウト
+ */
 function RootLayout() {
   return (
     <div className="min-h-screen bg-background">
