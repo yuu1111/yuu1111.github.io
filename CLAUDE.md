@@ -11,14 +11,14 @@ bun dev
 # ビルド (TypeScriptコンパイル + Viteビルド)
 bun run build
 
-# リント・フォーマットチェック
+# 型チェックのみ
+bun run typecheck
+
+# リントチェック
 bun run lint
 
-# フォーマット修正
+# フォーマット + unsafe自動修正
 bun run format
-
-# リント + フォーマット自動修正
-bun run check
 ```
 
 ## アーキテクチャ
