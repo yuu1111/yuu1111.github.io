@@ -1,20 +1,20 @@
 {
-  "extends": "@yuu1111/tsconfig/react.json",
-  "compilerOptions": {
-    "useDefineForClassFields": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "exactOptionalPropertyTypes": false,
-    "noUncheckedIndexedAccess": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@data/*": ["./data/*"],
-      "@content/*": ["./content/*"]
-    },
-    "types": ["vite/client", "node"]
-  },
-  "include": ["src", "data", "content", "*.ts", "vite.config.ts"]
+	"extends": "@yuu1111/tsconfig/react.json",
+	"compilerOptions": {
+		"useDefineForClassFields": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": false,
+		"noUncheckedIndexedAccess": false,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@data/*": ["./data/*"],
+			"@content/*": ["./content/*"]
+		},
+		"types": ["vite/client", "node"]
+	},
+	"include": ["src", "data", "content", "*.ts", "vite.config.ts"]
 }

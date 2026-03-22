@@ -1,26 +1,29 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { Navigation } from '@/components/Navigation'
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { Navigation } from "@/components/Navigation";
 
 export const Route = createRootRoute({
-  component: RootLayout,
-})
+	component: RootLayout,
+});
 
 /**
  * @description アプリケーション全体のルートレイアウト
  */
 function RootLayout() {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main className="container mx-auto px-4 py-8">
-        <Outlet />
-      </main>
-      <footer className="border-t py-6 text-center text-sm text-muted-foreground">
-        <p>
-          © 2025{new Date().getFullYear() > 2025 ? `-${new Date().getFullYear()}` : ''} yuu1111. All
-          rights reserved.
-        </p>
-      </footer>
-    </div>
-  )
+	return (
+		<div className="min-h-screen bg-background">
+			<Navigation />
+			<main className="container mx-auto px-4 py-8">
+				<Outlet />
+			</main>
+			<footer className="border-t py-6 text-center text-sm text-muted-foreground">
+				<p>
+					© 2025
+					{new Date().getFullYear() > 2025
+						? `-${new Date().getFullYear()}`
+						: ""}{" "}
+					yuu1111. All rights reserved.
+				</p>
+			</footer>
+		</div>
+	);
 }

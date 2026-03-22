@@ -6,8 +6,8 @@
  * @property label - 表示用ラベル(ユーザー名等)
  */
 export interface Contact {
-  name: string
-  icon: string
-  url: string
-  label: string
+	name: string;
+	icon: string;
+	url: string;
+	label: string;
 }

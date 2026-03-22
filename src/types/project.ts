@@ -7,9 +7,9 @@
  * @property fork - フォークプロジェクトかどうか @optional
  */
 export interface Project {
-  title: string
-  description: string
-  tags: string[]
-  url: string
-  fork?: boolean
+	title: string;
+	description: string;
+	tags: string[];
+	url: string;
+	fork?: boolean;
 }

@@ -1,42 +1,42 @@
 {
-  "name": "yuu1111-portfolio",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "typecheck": "tsc -b",
-    "lint": "biome check .",
-    "format": "biome check --write --unsafe .",
-    "knip": "knip"
-  },
-  "dependencies": {
-    "@icons-pack/react-simple-icons": "^13.13.0",
-    "@radix-ui/react-slot": "^1.2.4",
-    "@tanstack/react-router": "^1.168.1",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.577.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.5.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.4.8",
-    "@mdx-js/rollup": "^3.1.1",
-    "@tailwindcss/vite": "^4.2.2",
-    "@tanstack/router-plugin": "^1.167.2",
-    "@types/mdx": "^2.0.13",
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "@yuu1111/biome-config": "^1.0.3",
-    "@yuu1111/tsconfig": "^1.0.2",
-    "knip": "^6.0.1",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^5.9.3",
-    "vite": "^8.0.1"
-  }
+	"name": "yuu1111-portfolio",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"preview": "vite preview",
+		"typecheck": "tsc -b",
+		"lint": "biome check .",
+		"format": "biome check --write --unsafe .",
+		"knip": "knip"
+	},
+	"dependencies": {
+		"@icons-pack/react-simple-icons": "^13.13.0",
+		"@radix-ui/react-slot": "^1.2.4",
+		"@tanstack/react-router": "^1.168.1",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.577.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"tailwind-merge": "^3.5.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.8",
+		"@mdx-js/rollup": "^3.1.1",
+		"@tailwindcss/vite": "^4.2.2",
+		"@tanstack/router-plugin": "^1.167.2",
+		"@types/mdx": "^2.0.13",
+		"@types/node": "^25.5.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.1",
+		"@yuu1111/biome-config": "^1.0.3",
+		"@yuu1111/tsconfig": "^1.0.2",
+		"knip": "^6.0.1",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^5.9.3",
+		"vite": "^8.0.1"
+	}
 }

@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 /**
  * @description Tailwind CSSクラスを条件付きでマージする
@@ -7,5 +7,5 @@ import { twMerge } from 'tailwind-merge'
  * @returns マージされたクラス文字列
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+	return twMerge(clsx(inputs));
 }

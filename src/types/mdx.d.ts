@@ -5,16 +5,16 @@
  * @property description - 記事の概要 @optional
  */
 export interface PostFrontmatter {
-  title: string
-  date: string
-  description?: string
+	title: string;
+	date: string;
+	description?: string;
 }
 
-declare module '*.mdx' {
-  import type { ComponentType } from 'react'
+declare module "*.mdx" {
+	import type { ComponentType } from "react";
 
-  export const frontmatter: PostFrontmatter
+	export const frontmatter: PostFrontmatter;
 
-  const MDXComponent: ComponentType
-  export default MDXComponent
+	const MDXComponent: ComponentType;
+	export default MDXComponent;
 }

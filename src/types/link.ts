@@ -7,9 +7,9 @@
  * @property category - リンクのカテゴリ
  */
 export interface Link {
-  name: string
-  url: string
-  description?: string
-  username?: string
-  category: 'social' | 'development' | 'gaming' | 'wishlist'
+	name: string;
+	url: string;
+	description?: string;
+	username?: string;
+	category: "social" | "development" | "gaming" | "wishlist";
 }
