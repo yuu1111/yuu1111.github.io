@@ -1,8 +1,4 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## 開発コマンド
+# 開発コマンド
 
 ```bash
 # 開発サーバー起動
@@ -21,9 +17,9 @@ bun run lint
 bun run format
 ```
 
-## アーキテクチャ
+# アーキテクチャ
 
-### 技術スタック
+## 技術スタック
 - **フレームワーク**: React 19 + Vite
 - **ルーティング**: TanStack Router (ファイルベースルーティング)
 - **スタイリング**: Tailwind CSS v4
@@ -31,16 +27,19 @@ bun run format
 - **コンテンツ**: MDX
 - **デプロイ**: GitHub Pages (GitHub Actions)
 
-### ディレクトリ構造
+## ディレクトリ構造
 ```
 src/
 ├── routes/          # ファイルベースルーティング
 │   ├── __root.tsx   # ルートレイアウト
 │   ├── index.tsx    # ホーム (/)
-│   ├── blog/
-│   │   ├── index.tsx   # ブログ一覧 (/blog)
-│   │   └── $slug.tsx   # ブログ記事 (/blog/:slug)
-│   └── ...          # 他のページ
+│   ├── about.tsx    # 自己紹介 (/about)
+│   ├── contact.tsx  # 連絡先 (/contact)
+│   ├── links.tsx    # リンク集 (/links)
+│   ├── portfolio.tsx # ポートフォリオ (/portfolio)
+│   └── blog/
+│       ├── index.tsx   # ブログ一覧 (/blog)
+│       └── $slug.tsx   # ブログ記事 (/blog/:slug)
 ├── components/
 │   ├── ui/          # 共通UIコンポーネント (shadcn/uiスタイル)
 │   └── Navigation.tsx
@@ -55,25 +54,17 @@ content/
 └── blog/            # MDXブログ記事 (frontmatter: title, date)
 ```
 
-### パスエイリアス
+## パスエイリアス
 - `@/` → `src/`
 - `@data/` → `data/`
 - `@content/` → `content/`
 
-### ルーティング
+## ルーティング
 TanStack Routerは `src/routes/` 配下のファイル構造からルートを自動生成する。
 - `routeTree.gen.ts` は自動生成されるため編集不可
 - 動的ルートは `$param.tsx` 形式
 
-### ブログ記事の追加
+## ブログ記事の追加
 1. `content/blog/` に `slug-name.mdx` を作成
 2. frontmatter に `title` と `date` を設定
 3. MDXコンテンツは `import.meta.glob` で動的にインポートされる
-
-## コード規約
-
-### Biome設定
-- インデント: スペース2つ
-- 行幅: 100文字
-- クォート: シングルクォート
-- セミコロン: 必要な場合のみ
