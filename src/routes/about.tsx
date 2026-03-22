@@ -19,7 +19,7 @@ function AboutPage() {
 				</CardHeader>
 				<CardContent>
 					<p className="text-muted-foreground">
-						ここに自己紹介を書いてください。
+						{"// TODO : 自己紹介を書く"}
 					</p>
 				</CardContent>
 			</Card>
