@@ -1,6 +1,6 @@
-import type { ComponentType, SVGProps } from "react";
+import type { ComponentType } from "react";
 
 /**
  * @description SVGアイコンコンポーネントの共通型
  */
-export type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+export type IconComponent = ComponentType<{ className?: string }>;

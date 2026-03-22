@@ -46,10 +46,9 @@ const links = linksData as Link[];
  */
 const groupedLinks = links.reduce(
 	(acc, link) => {
-		if (!acc[link.category]) {
-			acc[link.category] = [];
-		}
-		acc[link.category].push(link);
+		const list = acc[link.category] ?? [];
+		list.push(link);
+		acc[link.category] = list;
 		return acc;
 	},
 	{} as Record<string, Link[]>,
