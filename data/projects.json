@@ -7,13 +7,6 @@
     "fork": true
   },
   {
-    "title": "obsidian-auto-link-title",
-    "description": "ペーストしたリンクのタイトルを自動取得するObsidianプラグイン",
-    "tags": ["TypeScript", "Obsidian"],
-    "url": "https://github.com/yuu1111/obsidian-auto-link-title",
-    "fork": true
-  },
-  {
     "title": "SteamPlayerTracker",
     "description": "Steamプレイヤーの追跡ツール",
     "tags": ["TypeScript"],
