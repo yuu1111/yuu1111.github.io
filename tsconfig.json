@@ -1,8 +1,6 @@
 {
 	"extends": "@yuu1111/tsconfig/react.json",
 	"compilerOptions": {
-		"noEmit": true,
-		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"],
 			"@data/*": ["./data/*"],

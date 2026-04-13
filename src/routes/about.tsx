@@ -18,9 +18,7 @@ function AboutPage() {
 					<CardTitle>自己紹介</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<p className="text-muted-foreground">
-						{"// TODO : 自己紹介を書く"}
-					</p>
+					<p className="text-muted-foreground">{"// TODO : 自己紹介を書く"}</p>
 				</CardContent>
 			</Card>
 
