@@ -23,5 +23,36 @@
     "description": "時間表示ウィジェットMod",
     "tags": ["C#", "Elin"],
     "url": "https://github.com/yuu1111/WidgetTimeViewer"
+  },
+  {
+    "title": "modal-ts",
+    "description": "非公式Modal SDK for TypeScript/JavaScript",
+    "tags": ["TypeScript"],
+    "url": "https://github.com/yuu1111/modal-ts",
+    "fork": true
+  },
+  {
+    "title": "hsp-sdl2-gamepad",
+    "description": "HSP用SDL2ゲームパッドラッパーDLL",
+    "tags": ["Zig", "HSP"],
+    "url": "https://github.com/yuu1111/hsp-sdl2-gamepad"
+  },
+  {
+    "title": "StreamNotifier",
+    "description": "Twitch配信のステータス変更をDiscord Webhookに通知するCLIツール",
+    "tags": ["Go"],
+    "url": "https://github.com/yuu1111/StreamNotifier"
+  },
+  {
+    "title": "dev-clean",
+    "description": "残留する開発サーバープロセスを検出・停止するCLIツール",
+    "tags": ["TypeScript", "C#"],
+    "url": "https://github.com/yuu1111/dev-clean"
+  },
+  {
+    "title": "sjis-tools",
+    "description": "SJIS/CP932ファイルを安全に編集するCLI(AIエージェント向け)",
+    "tags": ["TypeScript"],
+    "url": "https://github.com/yuu1111/sjis-tools"
   }
 ]
